@@ -1,0 +1,103 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Form Validation</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name = "author" content = "Living styleguide home page ">
+        <meta name="index" content="openning page.">
+         <script type="text/javascript" src="js/vendor/modernizr.min.js"></script>
+        <link type="text/css" href="css/style.css" rel="stylesheet" />  
+    </head>
+
+    <body>
+        <header>
+            <div class = "container">
+                <div id= "branding">
+                    <h1><span class =highlight>Living</span> Style Guide</h1>
+                </div>
+            </div>
+
+            <nav class="navbar">
+                <ul>
+                    <li class ="current"><a href="index.html">HOME</a></li>
+                    <li ><a href="About.html">ABOUT</a></li>
+                    <li><a href="typography.html">TYPOGRAPHY </a></li>
+                    <li><a href="colour_palette.html">COLOUR PALETTE</a></li>
+                    <li><a href="form.html">FORM</a></li>
+                    <li ><a href="reference.html">REFERENCES</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section id = "fpape" onclick= "validateForm()">
+            <section id = "searchbox">
+                <div class ="container">
+                    <form>
+                        <input type = "search" placeholder="search here">
+                        <button type = "submit" class="button_1">search</button>
+                    </form>
+                </div>
+            </section>
+
+            <section>
+                <form id ="register" >
+                    <legend>Personal details</legend> 
+                    <div id="tbox"> 
+                        <label>Full Name<br />
+                            <input id="name" onkeyup="validateName()" name="name" type="text" placeholder="Full name" autofocus ><label id="prompt"></label>
+                        </label>
+                    </div>
+                    <div id="tbox"> 
+                        <label>Email <br />
+                            <input id="mail" onkeyup="validateEmail()" name="mail" type="text" placeholder="Enter Email account" autofocus><label id="promptEmail"></label> 
+                        </label>
+                    </div>
+
+                    <div id="tbox">  
+                        <label>Comment <br />
+                            <textarea id="msg" onkeyup="validateCommment()" name="msg" type="text" placeholder="Leave a message" autofocus></textarea><label id="promptMsg"></label>
+                        </label>
+                    </div>
+
+                    <div>
+                        <button type="submit" onclick= "validateForm()" id="enter" value= "Submit"   class="formBtns">Submit Form</button><label id= "formPrompt"></label>
+                        <button type="button"  id="readDatabase"  value="Retrieve"   class="formBtns">Show Details</button><label></label>
+                        <button type="button"  id="resetDatabase" value="Reset"class="formBtns">Delete</button><label></label>
+                    </div>
+
+
+                    <div id= "output">
+                        <p id="receiverOutput"></p>
+                        <p id="receiverName"></p>
+                        <p id="receiverMail"></p>
+                        <p id="receiverMsg"></p>
+                    </div>
+                </form>
+                <article id="jscontent">
+
+                    <p> 
+                        One of the main difficulties experienced through assisgment 1b was getting the local storage to function correctly. The storage would eathier respond and not display the expected outcome or wont display at all.
+                        i was having issues taggerting sert area of the html code and realised the importance of function which creates redundancy of code.</p>
+
+                    <ul>
+                        <li> The form as  been validated using keyup function</li>
+                        <li > Form is accessible and user friendly</li>
+                        <li > form provides feed back to user</li>
+                        <li>data can be stored,retrived and deleted  successfully</li>
+                        <li>multiple event listers has been added through out the page</li>
+                        <li>email/user name all have been validated using regex </li>
+                        <li>comment box as been set with a counter</li>
+                        <li>feature detection also displayed at the beginning of the script</li>
+                        <li> all error such has naming conventions and image display has been rectified</li>
+                    </ul>
+                </article>
+            </section>
+        </section>
+
+        <script type="text/javascript" src="js/jquery-3.2.0.min.js"></script>
+        <script type="text/javascript" src="js/form.js"></script>
+        <script type="text/javascript" src="js/living_style_guide.js"></script>
+        
+    </body>
+</html>
